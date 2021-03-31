@@ -104,10 +104,11 @@
                         <div class='col col--3 px3'><input v-model='v.skin' class='input'/></div>
                         <div class='col col--1 px3'><input v-model='v.temp' class='input'/></div>
                         <div class='col col--2 px3'><input v-model='v.avpu' class='input'/></div>
+
                     </div>
 
                     <div class='col col--12 pt12'>
-                        <button @click='vitals.push(JSON.parse(vital))' class='btn btn--stroke round fr'>Add Vital</button>
+                        <button @click='vitals.push(JSON.parse(vital))' class='btn btn--stroke color-gray color-green-on-hover round fr'>Add Vital</button>
                     </div>
                 </div>
                 <div class='col col--4'>
@@ -120,10 +121,14 @@
                 <div class='col col--4 bg-black color-white align-center'>A' = Anticipated Problems</div>
                 <div class='col col--4 bg-black color-white align-center'>P = Treatment Plan</div>
 
-                <div class='col col--12 grid py12'>
-                    <div class='col col--4 px6'><textarea class='textarea'/></div>
-                    <div class='col col--4 px6'><textarea class='textarea'/></div>
-                    <div class='col col--4 px6'><textarea class='textarea'/></div>
+                <div :key='i' v-for='(a, i) of assessments' class='col col--12 grid py12 pt6'>
+                    <div class='col col--4 px6'><textarea v-model='a.assessment' class='textarea'/></div>
+                    <div class='col col--4 px6'><textarea v-model='a.anticipated' class='textarea'/></div>
+                    <div class='col col--4 px6'><textarea v-model='a.plan' class='textarea'/></div>
+                </div>
+
+                <div class='col col--12 pt12'>
+                    <button @click='assessments.push(JSON.parse(assessment))' class='btn btn--stroke color-gray color-green-on-hover round fr'>Add Assessment</button>
                 </div>
             </div>
             <div class='col col--12 grid pb6 border-l border-r border-b border--gray-light'>
