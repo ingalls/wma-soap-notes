@@ -1,6 +1,6 @@
 <template>
-    <div id="app h-full w-full">
-        <div class='grid col col--12 px24 py24'>
+    <div id='app' class='w-full flex-parent flex-parent--center-main'>
+        <div class='grid col col--12 px24 py24 flex-child' style='max-width: 800px;'>
             <div class='col col--2-ml col--12 align-center'>
                 <img src="./assets/wildmed-logo.svg" alt="Wilderness Medical Associates International">
                 <div class='flex-parent flex-parent--center-main py12'>
@@ -24,7 +24,7 @@
                     <label class='txt-bold'>Birthdate:</label>
                     <input v-text='birthdate' class='input' placeholder='DD/MM/YYYY'/>
                 </div>
-                <div class='col col--12 col--4-ml grid px6 pb6 border-r-ml border-b border--gray-light'>
+                <div class='col col--12 col--4-ml grid px6 pb6 border-b border--gray-light'>
                     <div class='col col--9'>
                         <label class='txt-bold'>Weight:</label>
                         <input v-text='weight' class='input' placeholder='120'/>
