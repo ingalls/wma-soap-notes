@@ -1,30 +1,30 @@
 <template>
     <div id="app h-full w-full">
         <div class='grid col col--12 px24 py24'>
-            <div class='col col--2'>
+            <div class='col col--2-ml col--12 align-center'>
                 <img src="./assets/wildmed-logo.svg" alt="Wilderness Medical Associates International">
-                <div class='flex-parent flex-parent--center-main pt12'>
+                <div class='flex-parent flex-parent--center-main py12'>
                     <button @click='exporter' class='btn round flex-child' style='background-color: #78a22e;'>Save PDF</button>
                 </div>
             </div>
-            <div class='grid col col--10'>
-                <div class='col col--6 px6 pb6 border border--gray-light'>
+            <div class='grid col col--12 col--10-ml border-t border-l border-r border--gray-light'>
+                <div class='col col--12 col--6-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Name:</label>
                     <input v-text='name' class='input' placeholder='John Smith'/>
                 </div>
-                <div class='col col--6 px6 pb6 border-t border-r border-b border--gray-light'>
+                <div class='col col--12 col--6-ml px6 pb6 border-b-ml border--gray-light'>
                     <label class='txt-bold'>Sex:</label>
                     <input v-text='sex' class='input' placeholder='Female'/>
                 </div>
-                <div class='col col--4 px6 pb6 border-b border-l border-r border--gray-light'>
+                <div class='col col--12 col--4-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Age:</label>
                     <input v-text='age' class='input' placeholder='63'/>
                 </div>
-                <div class='col col--4 px6 pb6 border-r border-b border--gray-light'>
+                <div class='col col--12 col--4-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Birthdate:</label>
                     <input v-text='birthdate' class='input' placeholder='DD/MM/YYYY'/>
                 </div>
-                <div class='col col--4 grid px6 pb6 border-r border-b border--gray-light'>
+                <div class='col col--12 col--4-ml grid px6 pb6 border-r-ml border-b border--gray-light'>
                     <div class='col col--9'>
                         <label class='txt-bold'>Weight:</label>
                         <input v-text='weight' class='input' placeholder='120'/>
@@ -40,11 +40,11 @@
                         </label>
                     </div>
                 </div>
-                <div class='col col--6 px6 pb6 border-l border-r border--gray-light'>
+                <div class='col col--12 col--6-ml px6 pb6 border-r-ml border--gray-light'>
                     <label class='txt-bold'>Emergency Contact:</label>
                     <input v-text='emergencycontact' class='input'/>
                 </div>
-                <div class='col col--6 px6 pb6 border-r border--gray-light'>
+                <div class='col col--12 col--6-ml px6 pb6 border--gray-light'>
                     <label class='txt-bold'>Phone:</label>
                     <input v-text='phone' class='input' placeholder='###-###-####'/>
                 </div>
@@ -54,27 +54,27 @@
                     <label class='txt-bold'>Scene:</label>
                     <textarea v-text='scene' class='textarea'/>
                 </div>
-                <div class='col col--5 px6 pb6'>
+                <div class='col col--12 col--5-ml px6 pb6'>
                     <label><span class='txt-bold'>S</span>ymptoms:</label>
                     <textarea v-text='symptoms' class='textarea'/>
                 </div>
-                <div class='col col--3 px6 pb6'>
+                <div class='col col--12 col--3-ml px6 pb6'>
                     <label><span class='txt-bold'>A</span>llergies:</label>
                     <textarea v-text='allergies' class='textarea'/>
                 </div>
-                <div class='col col--4 px6 pb6'>
+                <div class='col col--12 col--4-ml px6 pb6'>
                     <label><span class='txt-bold'>M</span>edications:</label>
                     <textarea v-text='medications' class='textarea'/>
                 </div>
-                <div class='col col--5 px6 pb6'>
+                <div class='col col--12 col--5-ml px6 pb6'>
                     <label><span class='txt-bold'>P</span>ertinent History:</label>
                     <textarea v-text='pertinenthistory' class='textarea'/>
                 </div>
-                <div class='col col--3 px6 pb6'>
+                <div class='col col--12 col--3-ml px6 pb6'>
                     <label><span class='txt-bold'>L</span>ast Ins/Outs:</label>
                     <textarea v-text='lastinsouts' class='textarea'/>
                 </div>
-                <div class='col col--4 px6 pb6'>
+                <div class='col col--12 col--4-ml px6 pb6'>
                     <label><span class='txt-bold'>E</span>vents:</label>
                     <textarea v-text='events' class='textarea'/>
                 </div>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light' style='align-items: flex-start;'>
-                <div class='col col--8 grid'>
+                <div class='col col--12 col--8-ml grid'>
                     <div class='col grid grid col--12 txt-bold'>
                         <div class='col col--1 align-center'>Time</div>
                         <div class='col col--2 align-center'>Pulse</div>
@@ -111,7 +111,7 @@
                         <button @click='vitals.push(JSON.parse(vital))' class='btn btn--stroke color-gray color-green-on-hover round fr'>Add Vital</button>
                     </div>
                 </div>
-                <div class='col col--4'>
+                <div class='col none inline-ml col--4'>
                     <img src="./assets/bob.png" alt="Physical Exam">
                 </div>
             </div>
