@@ -133,7 +133,7 @@
             </div>
             <div class='col col--12 grid pb6 border-l border-r border-b border--gray-light'>
                 <div class='col col--12 bg-black color-white align-center'>ADDITIONAL NOTES</div>
-                <div class='col col--12 px6'><textarea v-text='additionalnotes' class='textarea'/></div>
+                <div class='col col--12 px6 py6'><textarea v-text='additionalnotes' class='textarea'/></div>
             </div>
             <div class='col col--12 grid pb6'>
                 <div class='col col--4 align-center'>Face any challenge, anywhere.</div>
