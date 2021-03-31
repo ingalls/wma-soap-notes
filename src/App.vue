@@ -10,100 +10,121 @@
             <div class='grid col col--12 col--10-ml border-t border-l border-r border--gray-light'>
                 <div class='col col--12 col--6-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Name:</label>
-                    <input v-text='name' class='input' placeholder='John Smith'/>
+                    <input v-model='name' class='input' placeholder='John Smith'/>
                 </div>
                 <div class='col col--12 col--6-ml px6 pb6 border-b-ml border--gray-light'>
                     <label class='txt-bold'>Sex:</label>
-                    <input v-text='sex' class='input' placeholder='Female'/>
+                    <input v-model='sex' class='input' placeholder='Female'/>
                 </div>
                 <div class='col col--12 col--4-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Age:</label>
-                    <input v-text='age' class='input' placeholder='63'/>
+                    <input v-model='age' class='input' placeholder='63'/>
                 </div>
                 <div class='col col--12 col--4-ml px6 pb6 border-b-ml border-r-ml border--gray-light'>
                     <label class='txt-bold'>Birthdate:</label>
-                    <input v-text='birthdate' class='input' placeholder='DD/MM/YYYY'/>
+                    <input v-model='birthdate' class='input' placeholder='DD/MM/YYYY'/>
                 </div>
                 <div class='col col--12 col--4-ml grid px6 pb6 border-b border--gray-light'>
                     <div class='col col--9'>
                         <label class='txt-bold'>Weight:</label>
-                        <input v-text='weight' class='input' placeholder='120'/>
+                        <input v-model='weight' class='input' placeholder='120'/>
                     </div>
                     <div class='col col--3 pl6 pt12'>
                         <label class='txt-s radio-container ml6'>
-                            <input v-text='unit' name='radio-basic' type='radio'>
+                            <input v-model='units' name='radio-basic' type='radio'>
                             <div class='radio radio--s-label mr6'></div>kg
                         </label>
                         <label class='txt-s radio-container ml6'>
-                            <input v-text='unit' name='radio-basic' type='radio'>
+                            <input v-model='units' name='radio-basic' type='radio'>
                             <div class='radio radio--s-label mr6'></div>lbs
                         </label>
                     </div>
                 </div>
                 <div class='col col--12 col--6-ml px6 pb6 border-r-ml border--gray-light'>
                     <label class='txt-bold'>Emergency Contact:</label>
-                    <input v-text='emergencycontact' class='input'/>
+                    <input v-model='emergencycontact' class='input'/>
                 </div>
                 <div class='col col--12 col--6-ml px6 pb6 border--gray-light'>
                     <label class='txt-bold'>Phone:</label>
-                    <input v-text='phone' class='input' placeholder='###-###-####'/>
+                    <input v-model='phone' class='input' placeholder='###-###-####'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border border--gray-light'>
                 <div class='col col--12 px6'>
                     <label class='txt-bold'>Scene:</label>
-                    <textarea v-text='scene' class='textarea'/>
+                    <textarea v-model='scene' class='textarea'/>
                 </div>
                 <div class='col col--12 col--5-ml px6 pb6'>
                     <label><span class='txt-bold'>S</span>ymptoms:</label>
-                    <textarea v-text='symptoms' class='textarea'/>
+                    <textarea v-model='symptoms' class='textarea'/>
                 </div>
                 <div class='col col--12 col--3-ml px6 pb6'>
                     <label><span class='txt-bold'>A</span>llergies:</label>
-                    <textarea v-text='allergies' class='textarea'/>
+                    <textarea v-model='allergies' class='textarea'/>
                 </div>
                 <div class='col col--12 col--4-ml px6 pb6'>
                     <label><span class='txt-bold'>M</span>edications:</label>
-                    <textarea v-text='medications' class='textarea'/>
+                    <textarea v-model='medications' class='textarea'/>
                 </div>
                 <div class='col col--12 col--5-ml px6 pb6'>
                     <label><span class='txt-bold'>P</span>ertinent History:</label>
-                    <textarea v-text='pertinenthistory' class='textarea'/>
+                    <textarea v-model='pertinenthistory' class='textarea'/>
                 </div>
                 <div class='col col--12 col--3-ml px6 pb6'>
                     <label><span class='txt-bold'>L</span>ast Ins/Outs:</label>
-                    <textarea v-text='lastinsouts' class='textarea'/>
+                    <textarea v-model='lastinsouts' class='textarea'/>
                 </div>
                 <div class='col col--12 col--4-ml px6 pb6'>
                     <label><span class='txt-bold'>E</span>vents:</label>
-                    <textarea v-text='events' class='textarea'/>
+                    <textarea v-model='events' class='textarea'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light'>
                 <div class='col col--12'>
                     <label class='txt-bold'>Physical Exam:</label>
-                    <textarea v-text='physicalexam' class='textarea'/>
+                    <textarea v-model='physicalexam' class='textarea'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light' style='align-items: flex-start;'>
                 <div class='col col--12 col--8-ml grid'>
-                    <div class='col grid grid col--12 txt-bold'>
-                        <div class='col col--1 align-center'>Time</div>
-                        <div class='col col--2 align-center'>Pulse</div>
-                        <div class='col col--2 align-center'>Resp.</div>
-                        <div class='col col--1 align-center'>BP</div>
-                        <div class='col col--3 align-center'>Skin</div>
-                        <div class='col col--1 align-center'>Temp</div>
-                        <div class='col col--2 align-center'>AVPU</div>
+                    <div class='none clearfix block-ml col grid col--12 txt-bold'>
+                        <div class='fl col col--1 align-center'>Time</div>
+                        <div class='fl col col--2 align-center'>Pulse</div>
+                        <div class='fl col col--2 align-center'>Resp.</div>
+                        <div class='fl col col--1 align-center'>BP</div>
+                        <div class='fl col col--3 align-center'>Skin</div>
+                        <div class='fl col col--1 align-center'>Temp</div>
+                        <div class='fl col col--2 align-center'>AVPU</div>
                     </div>
-                    <div :key='i' v-for='(v, i) of vitals' class='col grid col--12 pt6'>
-                        <div class='col col--1 px3'><input v-model='v.time' class='input'/></div>
-                        <div class='col col--2 px3'><input v-model='v.pulse' class='input'/></div>
-                        <div class='col col--2 px3'><input v-model='v.resp' class='input'/></div>
-                        <div class='col col--1 px3'><input v-model='v.bp' class='input'/></div>
-                        <div class='col col--3 px3'><input v-model='v.skin' class='input'/></div>
-                        <div class='col col--1 px3'><input v-model='v.temp' class='input'/></div>
-                        <div class='col col--2 px3'><input v-model='v.avpu' class='input'/></div>
+                    <div :key='i' v-for='(v, i) of vitals' class='col grid col--12 mt6 py12 py3-ml border border--0-ml border--gray-light'>
+                        <div class='col col--12 col--1-ml px3'>
+                            <label class='none-ml txt-bold'>Time:</label>
+                            <input v-model='v.time' class='input'/>
+                        </div>
+                        <div class='col col--12 col--2-ml px3'>
+                            <label class='none-ml txt-bold'>Pulse:</label>
+                            <input v-model='v.pulse' class='input'/>
+                        </div>
+                        <div class='col col--12 col--2-ml px3'>
+                            <label class='none-ml txt-bold'>Respiration:</label>
+                            <input v-model='v.resp' class='input'/>
+                        </div>
+                        <div class='col col--12 col--1-ml px3'>
+                            <label class='none-ml txt-bold'>Blood Pressure:</label>
+                            <input v-model='v.bp' class='input'/>
+                        </div>
+                        <div class='col col--12 col--3-ml px3'>
+                            <label class='none-ml txt-bold'>Skin:</label>
+                            <input v-model='v.skin' class='input'/>
+                        </div>
+                        <div class='col col--12 col--1-ml px3'>
+                            <label class='none-ml txt-bold'>Temperature:</label>
+                            <input v-model='v.temp' class='input'/>
+                        </div>
+                        <div class='col col--12 col--2-ml px3'>
+                            <label class='none-ml txt-bold'>AVPU:</label>
+                            <input v-model='v.avpu' class='input'/>
+                        </div>
 
                     </div>
 
@@ -133,7 +154,7 @@
             </div>
             <div class='col col--12 grid pb6 border-l border-r border-b border--gray-light'>
                 <div class='col col--12 bg-black color-white align-center'>ADDITIONAL NOTES</div>
-                <div class='col col--12 px6 py6'><textarea v-text='additionalnotes' class='textarea'/></div>
+                <div class='col col--12 px6 py6'><textarea v-model='additionalnotes' class='textarea'/></div>
             </div>
             <div class='col col--12 grid pb6'>
                 <div class='col col--4 align-center'>Face any challenge, anywhere.</div>
@@ -156,8 +177,8 @@ export default {
             sex: '',
             age: '',
             birthdate: '',
-            weight: 'lbs',
-            units: '',
+            weight: '',
+            units: 'lbs',
             emergencycontact: '',
             phone: '',
             scene: '',
