@@ -3,83 +3,86 @@
         <div class='grid col col--12 px24 py24'>
             <div class='col col--2'>
                 <img src="./assets/wildmed-logo.svg" alt="Wilderness Medical Associates International">
+                <div class='flex-parent flex-parent--center-main pt12'>
+                    <button @click='exporter' class='btn round flex-child' style='background-color: #78a22e;'>Save PDF</button>
+                </div>
             </div>
             <div class='grid col col--10'>
                 <div class='col col--6 px6 pb6 border border--gray-light'>
                     <label class='txt-bold'>Name:</label>
-                    <input class='input' placeholder='John Smith'/>
+                    <input v-text='name' class='input' placeholder='John Smith'/>
                 </div>
                 <div class='col col--6 px6 pb6 border-t border-r border-b border--gray-light'>
                     <label class='txt-bold'>Sex:</label>
-                    <input class='input' placeholder='Female'/>
+                    <input v-text='sex' class='input' placeholder='Female'/>
                 </div>
                 <div class='col col--4 px6 pb6 border-b border-l border-r border--gray-light'>
                     <label class='txt-bold'>Age:</label>
-                    <input class='input' placeholder='63'/>
+                    <input v-text='age' class='input' placeholder='63'/>
                 </div>
                 <div class='col col--4 px6 pb6 border-r border-b border--gray-light'>
                     <label class='txt-bold'>Birthdate:</label>
-                    <input class='input' placeholder='DD/MM/YYYY'/>
+                    <input v-text='birthdate' class='input' placeholder='DD/MM/YYYY'/>
                 </div>
                 <div class='col col--4 grid px6 pb6 border-r border-b border--gray-light'>
                     <div class='col col--9'>
                         <label class='txt-bold'>Weight:</label>
-                        <input class='input' placeholder='120'/>
+                        <input v-text='weight' class='input' placeholder='120'/>
                     </div>
                     <div class='col col--3 pl6 pt12'>
                         <label class='txt-s radio-container ml6'>
-                            <input name='radio-basic' type='radio'>
+                            <input v-text='unit' name='radio-basic' type='radio'>
                             <div class='radio radio--s-label mr6'></div>kg
                         </label>
                         <label class='txt-s radio-container ml6'>
-                            <input name='radio-basic' type='radio'>
+                            <input v-text='unit' name='radio-basic' type='radio'>
                             <div class='radio radio--s-label mr6'></div>lbs
                         </label>
                     </div>
                 </div>
                 <div class='col col--6 px6 pb6 border-l border-r border--gray-light'>
                     <label class='txt-bold'>Emergency Contact:</label>
-                    <input class='input' placeholder='DD/MM/YYYY'/>
+                    <input v-text='emergencycontact' class='input' placeholder='DD/MM/YYYY'/>
                 </div>
                 <div class='col col--6 px6 pb6 border-r border--gray-light'>
                     <label class='txt-bold'>Phone:</label>
-                    <input class='input' placeholder='###-###-####'/>
+                    <input v-text='phone' class='input' placeholder='###-###-####'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border border--gray-light'>
                 <div class='col col--12 px6'>
                     <label class='txt-bold'>Scene:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='scene' class='textarea'/>
                 </div>
                 <div class='col col--5 px6 pb6'>
                     <label><span class='txt-bold'>S</span>ymptoms:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='symptoms' class='textarea'/>
                 </div>
                 <div class='col col--3 px6 pb6'>
                     <label><span class='txt-bold'>A</span>llergies:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='allergies' class='textarea'/>
                 </div>
                 <div class='col col--4 px6 pb6'>
                     <label><span class='txt-bold'>M</span>edications:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='medications' class='textarea'/>
                 </div>
                 <div class='col col--5 px6 pb6'>
                     <label><span class='txt-bold'>P</span>ertinent History:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='pertinenthistory' class='textarea'/>
                 </div>
                 <div class='col col--3 px6 pb6'>
                     <label><span class='txt-bold'>L</span>ast Ins/Outs:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='lastinsouts' class='textarea'/>
                 </div>
                 <div class='col col--4 px6 pb6'>
                     <label><span class='txt-bold'>E</span>vents:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='events' class='textarea'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light'>
                 <div class='col col--12'>
                     <label class='txt-bold'>Physical Exam:</label>
-                    <textarea class='textarea'/>
+                    <textarea v-text='physicalexam' class='textarea'/>
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light' style='align-items: flex-start;'>
@@ -121,7 +124,7 @@
             </div>
             <div class='col col--12 grid pb6 border-l border-r border-b border--gray-light'>
                 <div class='col col--12 bg-black color-white align-center'>ADDITIONAL NOTES</div>
-                <div class='col col--12 px6'><textarea class='textarea'/></div>
+                <div class='col col--12 px6'><textarea v-text='additionalnotes' class='textarea'/></div>
             </div>
             <div class='col col--12 grid pb6'>
                 <div class='col col--4 align-center'>Face any challenge, anywhere.</div>
@@ -135,6 +138,32 @@
 <script>
 
 export default {
-    name: 'App'
+    name: 'App',
+    data: function() {
+        return {
+            name: '',
+            sex: '',
+            age: '',
+            birthdate: '',
+            weight: 'lbs',
+            units: '',
+            emergencycontact: '',
+            phone: '',
+            scene: '',
+            symptoms: '',
+            allergies: '',
+            medications: '',
+            pertinenthistory: '',
+            lastinsouts: '',
+            events: '',
+            physicalexam: '',
+            additionalnotes: ''
+        };
+    },
+    methods: {
+        exporter() {
+            console.error('EXPORT');
+        }
+    }
 }
 </script>
