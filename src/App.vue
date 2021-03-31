@@ -42,7 +42,7 @@
                 </div>
                 <div class='col col--6 px6 pb6 border-l border-r border--gray-light'>
                     <label class='txt-bold'>Emergency Contact:</label>
-                    <input v-text='emergencycontact' class='input' placeholder='DD/MM/YYYY'/>
+                    <input v-text='emergencycontact' class='input'/>
                 </div>
                 <div class='col col--6 px6 pb6 border-r border--gray-light'>
                     <label class='txt-bold'>Phone:</label>
@@ -96,14 +96,18 @@
                         <div class='col col--1 align-center'>Temp</div>
                         <div class='col col--2 align-center'>AVPU</div>
                     </div>
-                    <div class='col grid col--12'>
-                        <div class='col col--1 px3'><input class='input'/></div>
-                        <div class='col col--2 px3'><input class='input'/></div>
-                        <div class='col col--2 px3'><input class='input'/></div>
-                        <div class='col col--1 px3'><input class='input'/></div>
-                        <div class='col col--3 px3'><input class='input'/></div>
-                        <div class='col col--1 px3'><input class='input'/></div>
-                        <div class='col col--2 px3'><input class='input'/></div>
+                    <div :key='i' v-for='(v, i) of vitals' class='col grid col--12 pt6'>
+                        <div class='col col--1 px3'><input v-model='v.time' class='input'/></div>
+                        <div class='col col--2 px3'><input v-model='v.pulse' class='input'/></div>
+                        <div class='col col--2 px3'><input v-model='v.resp' class='input'/></div>
+                        <div class='col col--1 px3'><input v-model='v.bp' class='input'/></div>
+                        <div class='col col--3 px3'><input v-model='v.skin' class='input'/></div>
+                        <div class='col col--1 px3'><input v-model='v.temp' class='input'/></div>
+                        <div class='col col--2 px3'><input v-model='v.avpu' class='input'/></div>
+                    </div>
+
+                    <div class='col col--12 pt12'>
+                        <button @click='vitals.push(JSON.parse(vital))' class='btn btn--stroke round fr'>Add Vital</button>
                     </div>
                 </div>
                 <div class='col col--4'>
@@ -156,9 +160,17 @@ export default {
             pertinenthistory: '',
             lastinsouts: '',
             events: '',
+            vitals: [],
             physicalexam: '',
-            additionalnotes: ''
+            additionalnotes: '',
+            assessments: [],
+            vital: JSON.stringify({ time: '', pulse: '', resp: '', bp: '', skin: '', temp: '', avpu: '' }),
+            assessment: JSON.stringify({ assessment: '', anticipated: '', plan: '' })
         };
+    },
+    mounted: function() {
+        this.vitals.push(JSON.parse(this.vital));
+        this.assessments.push(JSON.parse(this.assessment));
     },
     methods: {
         exporter() {
