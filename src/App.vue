@@ -145,6 +145,8 @@
 </template>
 
 <script>
+import { jsPDF } from 'jspdf';
+import "jspdf/dist/polyfills.es.js";
 
 export default {
     name: 'App',
@@ -179,7 +181,9 @@ export default {
     },
     methods: {
         exporter() {
-            console.error('EXPORT');
+            const doc = new jsPDF();
+
+            doc.save('soap-notes.pdf');
         }
     }
 }
