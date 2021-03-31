@@ -1,6 +1,6 @@
 <h1 align='center'>WMA SOAP Notes</h1>
 
-<p align='center'><a href='http://ingalls.ca/wmi-soap-notes/'>ingalls.ca/wmi-soap-notes</a></p>
+<p align='center'><a href='http://ingalls.ca/wma-soap-notes/'>ingalls.ca/wma-soap-notes</a></p>
 
 <p align='center'>Digital Version of the Wilderness Medical Institute Soap Notes</p>
 
