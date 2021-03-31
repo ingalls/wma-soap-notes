@@ -4,6 +4,8 @@
 
 <p align='center'>Digital Version of the Wilderness Medical Institute Soap Notes</p>
 
+<img src='./screen.png'/>
+
 ## Development
 
 ```sh
