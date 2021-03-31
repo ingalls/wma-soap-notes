@@ -1,4 +1,4 @@
-<h1 align='center'>WMI SOAP Notes</h1>
+<h1 align='center'>WMA SOAP Notes</h1>
 
 <p align='center'><a href='http://ingalls.ca/wmi-soap-notes/'>ingalls.ca/wmi-soap-notes</a></p>
 
