@@ -157,9 +157,9 @@
                 <div class='col col--12 px6 py6'><textarea v-model='additionalnotes' class='textarea'/></div>
             </div>
             <div class='col col--12 grid pb6'>
-                <div class='col col--4 align-center'>Face any challenge, anywhere.</div>
-                <div class='col col--4 align-center'>2021 Wilderness Medical Associates International</div>
-                <div class='col col--4 align-center'><a href='https://www.wildmed.com'>www.wildmed.com</a></div>
+                <div class='col col--12 py6 col--4-ml align-center'>Face any challenge, anywhere.</div>
+                <div class='col col--12 py6 col--4-ml align-center'>2021 Wilderness Medical Associates International</div>
+                <div class='col col--12 py6 col--4-ml align-center'><a href='https://www.wildmed.com'>www.wildmed.com</a></div>
             </div>
         </div>
     </div>
