@@ -239,4 +239,19 @@ export default {
     .col--12-mm { width: 100% !important; }
 }
 
+@media screen and (min-width: 800px) {
+    .col--1-ml { width: 8.3333% !important; }
+    .col--2-ml { width: 16.6666% !important; }
+    .col--3-ml { width: 25% !important; }
+    .col--4-ml { width: 33.3333% !important; }
+    .col--5-ml { width: 41.6666% !important; }
+    .col--6-ml { width: 50% !important; }
+    .col--7-ml { width: 58.3333% !important; }
+    .col--8-ml { width: 66.6666% !important; }
+    .col--9-ml { width: 75% !important; }
+    .col--10-ml { width: 83.3333% !important; }
+    .col--11-ml { width: 91.6666% !important; }
+    .col--12-ml { width: 100% !important; }
+}
+
 </style>
