@@ -1,5 +1,5 @@
 <template>
-    <div id='app' class='w-full flex-parent flex-parent--center-main'>
+    <div id='app' class='w-full flex flex--center-main'>
         <div class='grid col col--12 px24 py24 flex-child' style='max-width: 800px;'>
             <div class='col col--2-ml col--12 align-center'>
                 <img src="./assets/wildmed-logo.svg" alt="Wilderness Medical Associates International">
