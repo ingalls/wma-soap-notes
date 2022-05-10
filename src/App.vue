@@ -1,10 +1,10 @@
 <template>
-    <div id='app' class='w-full flex-parent flex-parent--center-main'>
+    <div id='app' class='w-full flex flex--center-main'>
         <div class='grid col col--12 px24 py24 flex-child' style='max-width: 800px;'>
             <div class='col col--2-ml col--12 align-center'>
                 <img src="./assets/wildmed-logo.svg" alt="Wilderness Medical Associates International">
                 <div class='flex-parent flex-parent--center-main py12'>
-                    <button @click='exporter' class='btn round flex-child' style='background-color: #78a22e;'>Save PDF</button>
+                    <button @click='print' class='btn round flex-child' style='background-color: #78a22e;'>Save PDF</button>
                 </div>
             </div>
             <div class='grid col col--12 col--10-ml border-t border-l border-r border--gray-light'>
@@ -201,6 +201,9 @@ export default {
         this.assessments.push(JSON.parse(this.assessment));
     },
     methods: {
+        print() {
+            window.print();
+        },
         exporter() {
             const doc = new jsPDF();
 
@@ -209,3 +212,51 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.col--1 { width: 8.3333% !important; }
+.col--2 { width: 16.6666% !important; }
+.col--3 { width: 25% !important; }
+.col--4 { width: 33.3333% !important; }
+.col--5 { width: 41.6666% !important; }
+.col--6 { width: 50% !important; }
+.col--7 { width: 58.3333% !important; }
+.col--8 { width: 66.6666% !important; }
+.col--9 { width: 75% !important; }
+.col--10 { width: 83.3333% !important; }
+.col--11 { width: 91.6666% !important; }
+.col--12 { width: 100% !important; }
+
+@media not print {
+    @media screen and (min-width: 800px) {
+        .col--1-ml { width: 8.3333% !important; }
+        .col--2-ml { width: 16.6666% !important; }
+        .col--3-ml { width: 25% !important; }
+        .col--4-ml { width: 33.3333% !important; }
+        .col--5-ml { width: 41.6666% !important; }
+        .col--6-ml { width: 50% !important; }
+        .col--7-ml { width: 58.3333% !important; }
+        .col--8-ml { width: 66.6666% !important; }
+        .col--9-ml { width: 75% !important; }
+        .col--10-ml { width: 83.3333% !important; }
+        .col--11-ml { width: 91.6666% !important; }
+        .col--12-ml { width: 100% !important; }
+    }
+}
+
+@media print {
+    .col--1-ml { width: 8.3333% !important; }
+    .col--2-ml { width: 16.6666% !important; }
+    .col--3-ml { width: 25% !important; }
+    .col--4-ml { width: 33.3333% !important; }
+    .col--5-ml { width: 41.6666% !important; }
+    .col--6-ml { width: 50% !important; }
+    .col--7-ml { width: 58.3333% !important; }
+    .col--8-ml { width: 66.6666% !important; }
+    .col--9-ml { width: 75% !important; }
+    .col--10-ml { width: 83.3333% !important; }
+    .col--11-ml { width: 91.6666% !important; }
+    .col--12-ml { width: 100% !important; }
+}
+
+</style>
