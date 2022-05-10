@@ -86,18 +86,19 @@
                 </div>
             </div>
             <div class='col col--12 grid px6 pb6 border-l border-r border-b border--gray-light' style='align-items: flex-start;'>
-                <div class='col col--12 col--8-ml grid'>
+                <div class='col col--12 col--12-ml grid'>
                     <div class='none clearfix block-ml col grid col--12 txt-bold'>
-                        <div class='fl col col--1 align-center'>Time</div>
+                        <div class='fl col col--2 align-center'>Time</div>
                         <div class='fl col col--2 align-center'>Pulse</div>
                         <div class='fl col col--2 align-center'>Resp.</div>
-                        <div class='fl col col--1 align-center'>BP</div>
-                        <div class='fl col col--3 align-center'>Skin</div>
+                        <div class='fl col col--2 align-center'>BP</div>
+                        <div class='fl col col--1 align-center'>Skin</div>
                         <div class='fl col col--1 align-center'>Temp</div>
-                        <div class='fl col col--2 align-center'>AVPU</div>
+                        <div class='fl col col--1 align-center'>AVPU</div>
+                        <div class='fl col col--1 align-center'>SpO2</div>
                     </div>
                     <div :key='i' v-for='(v, i) of vitals' class='col grid col--12 mt6 py12 py3-ml border border--0-ml border--gray-light'>
-                        <div class='col col--12 col--1-ml px3'>
+                        <div class='col col--12 col--2-ml px3'>
                             <label class='none-ml txt-bold'>Time:</label>
                             <input v-model='v.time' class='input'/>
                         </div>
@@ -109,11 +110,11 @@
                             <label class='none-ml txt-bold'>Respiration:</label>
                             <input v-model='v.resp' class='input'/>
                         </div>
-                        <div class='col col--12 col--1-ml px3'>
+                        <div class='col col--12 col--2-ml px3'>
                             <label class='none-ml txt-bold'>Blood Pressure:</label>
                             <input v-model='v.bp' class='input'/>
                         </div>
-                        <div class='col col--12 col--3-ml px3'>
+                        <div class='col col--12 col--1-ml px3'>
                             <label class='none-ml txt-bold'>Skin:</label>
                             <input v-model='v.skin' class='input'/>
                         </div>
@@ -121,19 +122,19 @@
                             <label class='none-ml txt-bold'>Temperature:</label>
                             <input v-model='v.temp' class='input'/>
                         </div>
-                        <div class='col col--12 col--2-ml px3'>
+                        <div class='col col--12 col--1-ml px3'>
                             <label class='none-ml txt-bold'>AVPU:</label>
                             <input v-model='v.avpu' class='input'/>
                         </div>
-
+                        <div class='col col--12 col--1-ml px3'>
+                            <label class='none-ml txt-bold'>SPO2:</label>
+                            <input v-model='v.spo2' class='input'/>
+                        </div>
                     </div>
 
                     <div class='col col--12 pt12'>
                         <button @click='vitals.push(JSON.parse(vital))' class='btn btn--stroke color-gray color-green-on-hover round fr'>Add Vital</button>
                     </div>
-                </div>
-                <div class='col none inline-ml col--4'>
-                    <img src="./assets/bob.png" alt="Physical Exam">
                 </div>
             </div>
             <div class='col col--12 grid pb6 border-l border-r border-b border--gray-light'>
@@ -192,7 +193,7 @@ export default {
             physicalexam: '',
             additionalnotes: '',
             assessments: [],
-            vital: JSON.stringify({ time: '', pulse: '', resp: '', bp: '', skin: '', temp: '', avpu: '' }),
+            vital: JSON.stringify({ time: '', pulse: '', resp: '', bp: '', skin: '', temp: '', avpu: '', spo2: '' }),
             assessment: JSON.stringify({ assessment: '', anticipated: '', plan: '' })
         };
     },
